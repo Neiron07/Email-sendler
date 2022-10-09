@@ -2,9 +2,13 @@
   "name": "email-sendler",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server/api.js",
+  "type": "module",
   "scripts": {
     "start": "node src/server/api.js",
+    "dev": "nodemon src/server/api.js",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +24,9 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
+    "chalk": "^5.1.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "express-validator": "^6.14.2",
     "jsonwebtoken": "^8.5.1",
