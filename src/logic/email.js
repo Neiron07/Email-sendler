@@ -13,11 +13,13 @@ class EmailSendler {
 	}
 	async AddEmail(req, res) {
 		try {
-			const {email, password} = req.body;
-			const result = await EmailDB.createEmail(email, password);
+			console.log(req.body);
+			const {email, text, password} = req.body;
+			const result = await EmailDB.createEmail(email, text, password);
 			return res.json(result);
 		} catch (e) {
 			Helper.logger('AddEmail', e);
+			return res.status(400).json(e);
 		}
 	}
 }
