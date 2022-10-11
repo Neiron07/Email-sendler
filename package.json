@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/server/api.js",
     "dev": "nodemon src/server/api.js",
-    "test-email":"nodemon src/helper/sendEmail.js",
+    "test-email":"node src/helper/sendEmail.js",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"

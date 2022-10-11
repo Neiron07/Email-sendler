@@ -13,7 +13,6 @@ class EmailSendler {
 	}
 	async AddEmail(req, res) {
 		try {
-			console.log(req.body);
 			const {email, text, password} = req.body;
 			const result = await EmailDB.createEmail(email, text, password);
 			return res.json(result);
