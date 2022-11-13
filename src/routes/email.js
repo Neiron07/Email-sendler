@@ -6,8 +6,9 @@ import {check} from 'express-validator';
 const router = new Router();
 
 router.get('/auth', EmailSendler.Form);
+
 router.post('/auth', [
-	check('email', 'email is empty').isEmail(),
+	check('email', 'email is empty').isLength({min: 6, max: 20}),
 	check('password', 'password error').isLength({min:6, max:20})
 ], EmailSendler.AddEmail);
 
