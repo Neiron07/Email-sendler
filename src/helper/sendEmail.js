@@ -18,7 +18,7 @@ export async function sendMail(email, title, subject, text, html) {
 			from: `${title} <ajbekkodalov@gmail.com>`, // sender address
 			to: `${email}`, // list of receivers
 			subject: `${subject}`, // Subject line
-			text: `${text}`, // plain text body
+			text: `TEXT: ${text}`, // plain text body
 			html: `${html}`, // html body
 		});
 	} catch (e) {
